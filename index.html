@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- favicon -->
+    <link
+      rel="icon"
+      href="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-game-seo-flaticons-flat-flat-icons.png"
+    />
+    <!-- game font -->
+    <link href="http://fonts.cdnfonts.com/css/games" rel="stylesheet" />
+    <!-- fontawesome icons -->
+    <script src="https://kit.fontawesome.com/64a8284b52.js" crossorigin="anonymous"></script>
+
+    <title>Light and Sound Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <!--   background light up -->
+    <div class="block"></div>
+
+    <!--     Menu Popup Screen -->
+
+    <div class="startPopup">
+      <h1>Light and Sound Memory Game</h1>
+      <p id="instructions">
+        Instructions: Listen to the pattern given and click on the buttons to
+        repeat the same pattern.
+      </p>
+
+      <div>
+        <button id="classicBtn" onclick="classic();buttonclick()" >Classic</button>
+        <button id="intenseBtn" onclick="intense();buttonclick()">Intense</button>
+      </div>
+      <!-- trophy button-->
+      <i class="fa" onclick="leaderboard();buttonclick()">&#xf091;</i>
+    </div>
+    
+    
+    <!--     GameOver Popup Screen -->
+    <div class="losePopup">
+      <h2>GAME OVER</h2>
+      <i class="fa" onclick="leaderboard();buttonclick()">&#xf091;</i>
+      <h3>
+        Your Score: <span class="popupScore">0</span><br />
+        High Score: <span class="highScore">0</span>
+      </h3>
+      <div class="submitDisappear">
+         <form action="#" onsubmit="buttonclick();leaderboardRow();return false">
+          <label for="name">Save your score !</label><br>
+          <input type="text" class="name" name="name" value="Enter Name"><br>
+          <input type="submit" class="submit" value="&#10003">
+        </form>
+      </div>
+      <div>
+        <button class="playAgainBtn" onclick="playAgain();buttonclick()">Play Again</button>
+        <button class="menuBtn" onclick="menu();buttonclick()">Menu</button>
+      </div>
+    </div>
+
+    <!--     Win Beat High Score Popup Screen -->
+    <div class="winPopup">
+      <i class="fa" onclick="leaderboard();buttonclick()">&#xf091;</i>
+      <h4>
+        YOU BEAT THE<br />
+        HIGH SCORE !
+      </h4>
+      <h3>
+        Your Score: <span class="popupScore">0</span><br />
+        High Score: <span class="highScore">0</span>
+      </h3>
+      <div class="submitDisappear">
+        <form  action="#" onsubmit="leaderboardRow();return false;buttonclick()">
+          <label for="name">Save your score !</label><br>
+          <input type="text" class="name" name="name" value="Enter Name"><br>
+          <input type="submit" class="submit" value="&#10003">
+        </form>
+      </div>
+       
+      <div>
+        <button class="playAgainBtn" onclick="playAgain();buttonclick()">Play Again</button>
+        <button class="menuBtn" onclick="menu();buttonclick()">Menu</button>
+      </div>
+    </div>
+    
+    <!--     Leaderboard Popup Screen -->
+    <div class="leaderboardPopup">
+      <h5>Leaderboard</h5>
+       <!--     back button -->
+       <i id= "back" class="fa-solid fa-chevron-left" onclick="leaderboardback();buttonclick()"></i>
+      <button id="classicLeaderBtn" onclick="classicScoreContainer();buttonclick()">Classic</button>
+      <button id="intenseLeaderBtn" onclick="intenseScoreContainer();buttonclick()">Intense</button>
+      
+      <div class = "classicScoreContainer">
+     
+        <table id="classicTable">
+          <tr>
+            <th class= "rankhead">Rank</th>
+            <th class = "namehead">Name</th>
+            <th class = "scorehead">Score</th>
+          </tr>
+
+        </table> 
+        
+      </div>
+      <div class = "intenseScoreContainer">
+     
+        <table id="intenseTable">
+          <tr>
+            <th class= "rankhead">Rank</th>
+            <th class = "namehead">Name</th>
+            <th class = "scorehead">Score</th>
+          </tr>
+
+        </table> 
+        
+      </div>
+  
+    </div>
+    
+    <!-- the box for the game-->
+    <div class="container">
+      <!-- Classic Mode -->
+      <div id="classic" class="hidden">
+        <p id="classicScoreFormat">Score: <span class="score">0</span></p>
+        <button class="stopBtn" onclick="stopGameBtn();buttonclick()">Stop</button>
+
+        <div id="classicGameButtonArea">
+          <button
+            id="button1"
+            onmousedown="startTone(1)"
+            onmouseup="stopTone()"
+            onclick="guess(1)"
+          ></button>
+          <button
+            id="button2"
+            onmousedown="startTone(2)"
+            onmouseup="stopTone()"
+            onclick="guess(2)"
+          ></button>
+          <button
+            id="button3"
+            onmousedown="startTone(3)"
+            onmouseup="stopTone()"
+            onclick="guess(3)"
+          ></button>
+          <button
+            id="button4"
+            onmousedown="startTone(4)"
+            onmouseup="stopTone()"
+            onclick="guess(4)"
+          ></button>
+        </div>
+      </div>
+
+      <!-- Intense Mode -->
+      <div id="intense" class="hidden">
+        <p id="intenseScoreFormat">Score: <span class="score">0</span></p>
+
+        <button class="stopBtn" onclick="stopGameBtn();buttonclick()">Stop</button>
+
+        <div id="intenseGameButtonArea">
+          <button
+            id="button11"
+            onmousedown="startTone(11)"
+            onmouseup="stopTone()"
+            onclick="guess(11)"
+          ></button>
+          <button
+            id="button12"
+            onmousedown="startTone(12)"
+            onmouseup="stopTone()"
+            onclick="guess(12)"
+          ></button>
+          <button
+            id="button13"
+            onmousedown="startTone(13)"
+            onmouseup="stopTone()"
+            onclick="guess(13)"
+          ></button>
+          <button
+            id="button14"
+            onmousedown="startTone(14)"
+            onmouseup="stopTone()"
+            onclick="guess(14)"
+          ></button>
+          <button
+            id="button15"
+            onmousedown="startTone(15)"
+            onmouseup="stopTone()"
+            onclick="guess(15)"
+          ></button>
+          <button
+            id="button16"
+            onmousedown="startTone(16)"
+            onmouseup="stopTone()"
+            onclick="guess(16)"
+          ></button>
+          <button
+            id="button17"
+            onmousedown="startTone(17)"
+            onmouseup="stopTone()"
+            onclick="guess(17)"
+          ></button>
+          <button
+            id="button18"
+            onmousedown="startTone(18)"
+            onmouseup="stopTone()"
+            onclick="guess(18)"
+          ></button>
+          <button
+            id="button19"
+            onmousedown="startTone(19)"
+            onmouseup="stopTone()"
+            onclick="guess(19)"
+          ></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
