@@ -48,10 +48,7 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-![](http://g.recordit.co/dcCd11yxzW.gif)
-![](http://g.recordit.co/fyRgYWPqVE.gif)
-![](http://g.recordit.co/eK0bdTegXh.gif)
-
+(http://g.recordit.co/dcCd11yxzW.gif)
 
 
 
