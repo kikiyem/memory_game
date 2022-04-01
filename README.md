@@ -48,8 +48,7 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-![Classic Mode](http://g.recordit.co/aJ7THC9J64.gif)
-<img src="http://g.recordit.co/aJ7THC9J64.gif" width="250" height="250"/>
+![Classic Mode](http://g.recordit.co/dcCd11yxzW.gif)
 ![Intense Mode](http://g.recordit.co/fyRgYWPqVE.gif)
 ![Leaderboard](http://g.recordit.co/eK0bdTegXh.gif)
 
