@@ -1,0 +1,572 @@
+body {
+  margin: 2em;
+
+  line-height: 1;
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  top: 10%;
+  position: relative;
+
+  text-align: center;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+h2 {
+  top: 10%;
+  left: 30%;
+  position: absolute;
+
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 1;
+}
+
+h3 {
+  top: 30%;
+  left: 30%;
+
+  position: absolute;
+  text-align: center;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 2;
+}
+
+h4 {
+  top: 5%;
+  left: 25%;
+  position: absolute;
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 1;
+}
+
+h5 {
+  top: 10px;
+  left: 18%;
+  position: absolute;
+  line-height: 0.5;
+  text-align: center;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 1em;
+}
+
+button {
+  padding: 5px;
+  border-radius: 10px;
+  background: white;
+}
+
+button:hover {
+  background: #c0c0c0;
+}
+
+#instructions {
+  top: 7%;
+  position: relative;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+
+  font-weight: bold;
+}
+
+#classicBtn {
+  top: 60%;
+  left: 40%;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  margin: 2px;
+}
+
+#intenseBtn {
+  top: 70%;
+  left: 40%;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  margin: 2px;
+}
+.hidden {
+  display: none;
+}
+#canvas {
+  height: 530px;
+  width: 530px;
+  z-index: 1;
+  position: absolute;
+  display: block;
+  left: 30.1%;
+  bottom: 4.9%;
+}
+
+.stopBtn {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  font-size: 15px;
+}
+
+#classicScoreFormat {
+  text-align: center;
+  font-size: 20px;
+}
+
+#intenseScoreFormat {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* classic game set up */
+
+#classicGameButtonArea > button {
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+  position: absolute;
+}
+
+#button1 {
+  background: lightgreen;
+  top: 12%;
+  left: 9%;
+}
+
+#button2 {
+  background: lightyellow;
+  top: 12%;
+  right: 9%;
+}
+
+#button3 {
+  background: lightblue;
+  bottom: 6%;
+  left: 9%;
+}
+
+#button4 {
+  background: pink;
+  bottom: 6%;
+  right: 9%;
+}
+
+#button1:active,
+#button1.lit {
+  background: green;
+}
+#button2:active,
+#button2.lit {
+  background: yellow;
+}
+#button3:active,
+#button3.lit {
+  background: blue;
+}
+#button4:active,
+#button4.lit {
+  background: red;
+}
+
+/* intense game set up */
+
+#intenseGameButtonArea > button {
+  width: 125px;
+  height: 125px;
+  margin: 2px;
+  position: absolute;
+}
+
+#button11 {
+  background: lightgreen;
+  top: 70px;
+  left: 50px;
+}
+
+#button12 {
+  background: lightyellow;
+  top: 70px;
+  left: 200px;
+}
+
+#button13 {
+  background: Thistle;
+  top: 70px;
+  left: 350px;
+}
+
+#button14 {
+  background: pink;
+  top: 220px;
+  left: 50px;
+}
+#button15 {
+  background: lightblue;
+  top: 220px;
+  left: 200px;
+}
+
+#button16 {
+  background: LavenderBlush;
+  top: 220px;
+  left: 350px;
+}
+
+#button17 {
+  background: lavender;
+  top: 370px;
+  left: 50px;
+}
+
+#button18 {
+  background: BlanchedAlmond;
+  top: 370px;
+  left: 200px;
+}
+
+#button19 {
+  background: #7fffd4;
+  top: 370px;
+  left: 350px;
+}
+#button11:active,
+#button11.lit {
+  background: green;
+}
+#button12:active,
+#button12.lit {
+  background: yellow;
+}
+#button13:active,
+#button13.lit {
+  background: purple;
+}
+#button14:active,
+#button14.lit {
+  background: red;
+}
+
+#button15:active,
+#button15.lit {
+  background: blue;
+}
+#button16:active,
+#button16.lit {
+  background: pink;
+}
+#button17:active,
+#button17.lit {
+  background: Plum;
+}
+#button18:active,
+#button18.lit {
+  background: Orange;
+}
+#button19:active,
+#button19.lit {
+  background: seagreen;
+}
+
+.startPopup {
+  display: block;
+  height: 445px;
+  width: 445px;
+  position: absolute;
+  border: 3px solid black;
+  left: 30%;
+
+  text-align: center;
+  z-index: 2;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.losePopup {
+  display: none;
+  line-height: 3;
+  height: 440px;
+  width: 440px;
+  position: absolute;
+  border: 3px solid black;
+  left: 30%;
+  background: black;
+
+  text-align: center;
+  z-index: 2;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.winPopup {
+  display: none;
+  line-height: 3;
+  height: 440px;
+  width: 440px;
+  position: absolute;
+  border: 3px solid black;
+  left: 30%;
+  background: black;
+
+  text-align: center;
+  z-index: 2;
+  opacity: 0.8;
+  padding: 40px;
+}
+
+.playAgainBtn {
+  font-size: 20px;
+  top: 62%;
+  left: 35%;
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  margin: 2px;
+}
+
+.menuBtn {
+  font-size: 20px;
+  top: 72%;
+  left: 40%;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  margin: 2px;
+}
+
+.container {
+  height: 535px;
+  width: 535px;
+  position: absolute;
+  display: block;
+  left: 30%;
+  right: 30%;
+  background: black;
+}
+
+/* background lights */
+.container:before,
+.container:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+/* color border movement */
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.container:after {
+  filter: blur(50px);
+}
+
+/* game font */
+@font-face {
+  font-family: "Games";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Games"),
+    url("https://fonts.cdnfonts.com/s/14926/Games.woff") format("woff");
+}
+@font-face {
+  font-family: "Games";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Games"),
+    url("https://fonts.cdnfonts.com/s/14926/Games-Italic.woff") format("woff");
+}
+* {
+  font-family: "Games", sans-serif;
+}
+
+/* Save your score */
+label {
+  font-size: 20px;
+  bottom: 1%;
+  left: 35%;
+  position: absolute;
+  text-align: center;
+}
+/* name textbox */
+.name {
+  font-size: 15px;
+  bottom: 10%;
+  left: 36%;
+  position: absolute;
+  text-align: center;
+  width: 130px;
+  height: 25px;
+}
+/* checkmark */
+.submit {
+  font-size: 15px;
+  bottom: 10%;
+  left: 64%;
+  position: absolute;
+  text-align: center;
+  width: 30px;
+  height: 32px;
+}
+.submit:hover {
+  background: #c0c0c0;
+}
+
+/* leaderboard */
+.fa {
+  right: 3%;
+  top: 3%;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+}
+.fa:hover {
+  background: #c0c0c0;
+}
+#back {
+  left: 3%;
+  top: 3%;
+  position: absolute;
+  font-size: 25px;
+  color: white;
+}
+.leaderboardPopup {
+  display: none;
+  line-height: 3;
+  height: 440px;
+  width: 440px;
+  position: absolute;
+  border: 3px solid black;
+  left: 30%;
+  background: black;
+
+  text-align: center;
+  z-index: 2;
+
+  padding: 40px;
+}
+.classicScoreContainer {
+  display: none;
+  height: 375px;
+  width: 471px;
+  left: 24px;
+  bottom: 24px;
+  top: 120px;
+  background: #242124;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  padding: 5px;
+}
+
+.intenseScoreContainer {
+  display: none;
+  height: 375px;
+  width: 471px;
+  left: 24px;
+  bottom: 24px;
+  top: 120px;
+  background: #242124;
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  padding: 5px;
+}
+#classicLeaderBtn {
+  font-size: 15px;
+  top: 90px;
+  left: 23px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 1px;
+}
+
+#intenseLeaderBtn {
+  font-size: 15px;
+  top: 90px;
+  left: 125px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin: 1px;
+}
+
+#classicLeaderBtn:active,
+#classicLeaderBtn.lit {
+  background: #242124;
+  color: white;
+}
+
+#intenseLeaderBtn:active,
+#intenseLeaderBtn.lit {
+  background: #242124;
+  color: white;
+}
+
+table,
+th,
+td {
+  border: 1px solid white;
+  text-align: center;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
+  z-index: 4;
+}
+
+table {
+  width: 480px;
+  top: 2px;
+  left: 1px;
+  position: absolute;
+}
+.rankhead {
+  width: 20%;
+}
+.namehead {
+  width: 60%;
+}
+.scorehead {
+  width: 20%;
+}
