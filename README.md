@@ -48,11 +48,12 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-<img src='http://g.recordit.co/dcCd11yxzW.gif' title='Classic Game Mode' width='' alt='Classic Game Mode' />
+![](http://g.recordit.co/dcCd11yxzW.gif)
+![](http://g.recordit.co/fyRgYWPqVE.gif)
+![](http://g.recordit.co/eK0bdTegXh.gif)
 
-<img src='http://g.recordit.co/fyRgYWPqVE.gif' title='Intense Game Mode' width='' alt='Intense Game Mode' />
 
-<img src='http://g.recordit.co/eK0bdTegXh.gif' title='Leaderboard' width='' alt='Leaderboard' />
+
 
 ## Reflection Questions
 
